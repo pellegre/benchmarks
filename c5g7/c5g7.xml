@@ -4,6 +4,14 @@
  left and bottom  Vacuum boundary conditions on the left and bottom. Adapted
  from OpenMOC input. 
  -->
+
+<settings>
+
+  <multithread value="tbb" />
+    <criticality batches="2000" inactive="150" particles="10000" />
+
+</settings>
+
 <geometry>
 
 <!-- Definition of Cells -->

@@ -13,3 +13,10 @@
   <source  samplers="core"/>
 
 </sources>
+
+<settings>
+
+  <multithread value="tbb" />
+  <criticality batches="2000" inactive="150" particles="10000" />
+
+</settings>

@@ -9,8 +9,10 @@ scattering. To correctly compare results with MCNP this card should be added:
 phys:n 20E6 20E6 1 0 0
 
 That card will also turn off implicit capture on MCNP (since Helios is doing
-an analog simulation ATM). An of course, all "mt" cards should be deleted from
+an analog simulation). An of course, all "mt" cards should be deleted from
 MCNP input files.
+
+---- 
 
 This repository contains a collection of benchmark models for the OpenMC and
 other Monte Carlo particle transport codes. The following benchmark models are
