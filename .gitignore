@@ -7,9 +7,9 @@ srct?
 runtp?
 mcta?
 comou?
+input?
 
 # OpenMP output files
-*.out
 *.binary
 *.h5
 *.ppm

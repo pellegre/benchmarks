@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<sources>
+
+<!-- Define distributions -->
+  <dist    type="isotropic" id="iso" />
+  <dist    type="box"   id="box" x="-160 160" y="-160 160" z="-183 183" />
+
+<!-- Define particle samplers -->
+  <sampler id="core" pos="0 0 0" 
+           dist="iso box" />
+
+<!-- Definition of the source -->
+  <source  samplers="core"/>
+
+</sources>

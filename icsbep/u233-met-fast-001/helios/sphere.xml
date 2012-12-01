@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<geometry>
+
+  <cell id="1" material="uranium" surfaces="-1" />
+  <surface id="1" type="so" coeffs="5.9838" boundary="vacuum" />
+
+</geometry>
+
+<materials>
+
+  <material id="uranium" density="18.424" units="g/cm3" fraction="atom" dataset="03c" >
+    <isotope name="U-233" fraction="4.6712e-2" />
+    <isotope name="U-234" fraction="5.9026e-4" />
+    <isotope name="U-235" fraction="1.4281e-5" />
+    <isotope name="U-238" fraction="2.8561e-4" />
+  </material>
+
+</materials>
+
+<sources>
+
+<!-- Define distributions -->
+  <dist    type="ace" id="fission" isotope="U-233.03c" mt="18" />
+
+<!-- Define particle samplers -->
+  <sampler id="core" pos="0 0 0" energy="2.53E-8" 
+           dist="fission" />
+
+<!-- Definition of the source -->
+  <source  samplers="core"/>
+
+</sources>
+
+<settings>
+
+  <multithread value="tbb" />
+  <criticality batches="1150" inactive="150" particles="50000" />
+
+</settings>
+

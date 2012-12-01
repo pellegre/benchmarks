@@ -1,0 +1,35 @@
+set title "Simple pin"
+
+% --- assembly data:
+
+surf  1  cyl  0.0 0.0 1.27
+surf  2  sqc  0.0 0.0 2.54
+
+cell 1  0  uranium  -1
+cell 2  0  water     1 -2
+cell 3  0  outside   2  
+
+% --- Materials:
+
+mat uranium -18.8
+92235.03c  0.0098
+92238.03c  0.9902
+
+mat water  -1.0
+ 1001.03c  2.0
+ 8016.03c  1.0
+
+% --- Cross section library file path:
+
+set acelib "sss_endfb7.xsdata"
+
+% --- Reflective boundary condition:
+
+set bc 2
+
+% --- Neutron population and criticality cycles:
+
+set pop 10000 1050 50
+plot 3 500 500
+mesh 3 500 500
+

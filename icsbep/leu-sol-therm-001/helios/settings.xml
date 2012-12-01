@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<sources>
+
+<!-- Define fission distributions -->
+  <dist    type="ace"   id="fiss234" isotope="92234.03c" mt="18" />
+  <dist    type="ace"   id="fiss235" isotope="92235.03c" mt="18" />
+  <dist    type="ace"   id="fiss236" isotope="92236.03c" mt="18" />
+  <dist    type="ace"   id="fiss238" isotope="92238.03c" mt="18" /> 
+<!-- Hidrogen Gas Treatment spectrum --> 
+  <dist    type="ace"   id="thermal" isotope="1001.03c"  mt="2" />
+
+  <!-- Define a custom fission spectrum (using atom density to weight each spectrum) -->
+  <dist   type="custom" id="fission"  
+          dist="fiss234   fiss235   fiss236   fiss238   " 
+       weights="6.7855e-7 1.2377e-4 1.2085e-6 2.3508e-3 " />
+
+<!-- Spatial distribution -->
+  <dist    type="cyl-z" id="cylinder" r="3.175 24.4475" />
+  <dist    type="box"   id="height"   z="-37.1425 7.6575" />
+
+<!-- Define particle samplers -->
+  <sampler id="solution" pos="0 0 0" energy="2.53E-8"
+           dist="thermal fission cylinder height " />
+
+<!-- Definition of the source -->
+  <source  samplers="solution"/>
+
+</sources>
+
+<settings>
+
+  <multithread value="tbb" />
+  <criticality batches="2000" inactive="150" particles="10000" />
+
+</settings>

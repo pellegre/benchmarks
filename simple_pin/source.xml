@@ -1,0 +1,13 @@
+<sources>
+
+  <!-- Isotropic distribution (for direction) -->
+  <dist id="iso" type="isotropic" />
+  <!-- Box distribution (on x-y, this mean z = 0) -->
+  <dist id="pin" type="cyl-z" r="0 1.27" />
+
+  <!-- Now, the source definition -->
+  <sampler id="core" pos="0 0 0" dist="iso pin"/>
+
+  <source samplers="core" />
+
+</sources>

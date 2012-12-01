@@ -1,0 +1,26 @@
+<sources>
+
+  <!-- Isotropic distribution (for direction) -->
+  <dist type="isotropic" id="iso" />
+  <!-- Box distribution (on x-y, this mean z = 0) -->
+  <dist type="box" id="unif-box1" x="-10.71  10.71"  y="-10.71 10.71" />
+  <dist type="box" id="unif-box2" x="-10.71 -32.13"  y=" 10.71 32.13" />
+  <dist type="box" id="unif-box3" x="-10.71 -32.13"  y="-10.71 10.71" />
+  <dist type="box" id="unif-box4" x="-10.71  10.71"  y=" 10.71 32.13" />
+  <!-- Define a custom distribution (same weight for each one - default) -->
+  <dist   type="custom" id="my-unif-box1"  
+          dist="unif-box1 unif-box2" 
+       weights="1.0       1.0      " />
+  <dist   type="custom" id="my-unif-box2"  
+          dist="unif-box3 unif-box4" 
+       weights="1.0       1.0      " />
+  <dist   type="custom" id="my-unif-box"  
+          dist="my-unif-box1 my-unif-box2" 
+       weights="1.0          1.0      " />
+
+  <!-- Now, the source definition -->
+  <sampler id="core" pos="0 0 0" dist="iso my-unif-box"/>
+
+  <source samplers="core" />
+
+</sources>

@@ -1,0 +1,16 @@
+<sources>
+
+  <!-- Isotropic distribution (for direction) -->
+  <dist id="iso" type="isotropic" />
+  <!-- Box distribution (on x-y, this mean z = 0) -->
+  <dist id="unif-box1" type="box" x="-10.71  10.71"  y="-10.71 10.71" />
+
+  <!-- Now, the source definition -->
+  <sampler id="core1" pos="  0.00  0.00 0" dist="iso unif-box1"/>
+  <sampler id="core2" pos="-21.42  0.00 0" dist="iso unif-box1"/>
+  <sampler id="core3" pos="  0.00 21.42 0" dist="iso unif-box1"/>
+  <sampler id="core4" pos="-21.42 21.42 0" dist="iso unif-box1"/>
+
+  <source samplers="core1 core2 core3 core4" />
+
+</sources>

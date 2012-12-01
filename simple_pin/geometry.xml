@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<!-- rectangular cell with a single pin filled with a single 
+     homogeneous material.
+-->
+
+<geometry>
+
+<!-- Definition of Cells -->
+  <cell id="1" material="uranium" surfaces="-1" />
+  <cell id="2" material="water"  surfaces="1 2 -3 4 -5" />
+
+<!-- Defition of Surfaces -->
+  <surface id="1" type="cz" coeffs="1.27" />
+  <surface id="2" type="px" coeffs="-2.54" boundary="reflective" />
+  <surface id="3" type="px" coeffs=" 2.54" boundary="reflective" />
+  <surface id="4" type="py" coeffs="-2.54" boundary="reflective" />
+  <surface id="5" type="py" coeffs=" 2.54" boundary="reflective" />
+    
+</geometry>

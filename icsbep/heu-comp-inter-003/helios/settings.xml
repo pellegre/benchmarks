@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<sources>
+
+<!-- Define distributions -->
+  <dist    type="isotropic" id="iso" />
+  <dist    type="ace"   id="fission" isotope="92235.03c" mt="18" />
+  <dist    type="cyl-z" id="cyl" r="0.0 10.0609" />
+  <dist    type="box"   id="box" z="2.5242 15.2315" />
+
+<!-- Define particle samplers -->
+  <sampler id="core" pos="0 0 0" energy="1E-10"
+           dist="iso fission cyl box" />
+
+<!-- Definition of the source -->
+  <source  samplers="core"/>
+
+</sources>
+
+<settings>
+
+  <xs_data value="/users/larry/IB/CalCod/SERPENT/xsdata/endfb7/data" />
+  <multithread value="tbb" />
+  <criticality batches="1150" inactive="150" particles="10000" />
+
+</settings>

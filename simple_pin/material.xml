@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<materials>
+
+  <material id="uranium" density="18.8" units="g/cm3" fraction="atom" >
+    <isotope name="92238.03c" fraction="0.9902" />
+    <isotope name="92235.03c" fraction="0.0098" />
+  </material>
+
+  <!-- Water at 1 g/cc -->
+  <material id="water" density="1.0" units="g/cm3" fraction="atom">
+    <isotope name="1001.03c" fraction="2.0" />
+    <isotope name="8016.03c" fraction="1.0" />
+  </material>
+
+</materials>
