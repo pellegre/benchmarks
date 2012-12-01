@@ -18,6 +18,7 @@
 
 <settings>
 
+  <xs_data value="/users/larry/IB/CalCod/SERPENT/xsdata/endfb7/data" />
   <multithread value="tbb" />
   <criticality batches="1150" inactive="150" particles="10000" />
 

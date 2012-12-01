@@ -1,0 +1,390 @@
+
+     / / / /__  / (_)___  _____  __    __
+    / /_/ / _ \/ / / __ \/ ___/_/ /___/ /_
+   / __  /  __/ / / /_/ (__  )_  __/_  __/
+  /_/ /_/\___/_/_/\____/____/ /_/   /_/
+
+
+  A Continuous-energy Monte Carlo Reactor Physics Code
+
+   - Version    : 0.1
+   - Contact    : Esteban Pellegrino (pellegre@ib.cnea.gov.ar) 
+   - Compiler   : /usr/bin/c++
+   - Build type : release
+   - Build date : 11/30/2012 - 03:23:19 PM (commit aa5086ddf9494ca549fc47375aa134228e9679f0)
+   - Boost      : Version 1_42
+   - Intel TBB  : Version 3.0
+
+  Begin calculation on Sat Dec  1 03:55:11 2012
+
+********************************************************************************
+
+[#] Materials module
+
+material = 1 ; internal = 0 : 
+     - density = 1.006200e+01 g/cm3 
+     - density = 6.821851e-02 atom/b-cm 
+        (mass fraction = 4.150176e-04 ; atomic fraction = 3.884180e-04) isotope = 42095.03c ; awr = 9.409060e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 5.349379e-04 ; atomic fraction = 4.804028e-04) isotope = 43099.03c ; awr = 9.805660e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 5.119470e-04 ; atomic fraction = 4.506452e-04) isotope = 44101.03c ; awr = 1.000390e+02 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 3.991803e-05 ; atomic fraction = 3.445584e-05) isotope = 44103.03c ; awr = 1.020200e+02 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 3.596235e-05 ; atomic fraction = 2.933108e-05) isotope = 47109.03c ; awr = 1.079690e+02 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.404777e-07 ; atomic fraction = 1.583312e-07) isotope = 54135.03c ; awr = 1.337480e+02 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 7.591840e-04 ; atomic fraction = 5.073753e-04) isotope = 55133.03c ; awr = 1.317640e+02 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 6.150530e-04 ; atomic fraction = 3.822759e-04) isotope = 60143.03c ; awr = 1.416820e+02 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 4.758752e-04 ; atomic fraction = 2.916836e-04) isotope = 60145.03c ; awr = 1.436680e+02 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 3.910421e-05 ; atomic fraction = 2.364194e-05) isotope = 62147.03c ; awr = 1.456530e+02 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.857521e-06 ; atomic fraction = 1.704395e-06) isotope = 62149.03c ; awr = 1.476380e+02 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.774638e-04 ; atomic fraction = 1.051442e-04) isotope = 62150.03c ; awr = 1.486290e+02 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.368567e-05 ; atomic fraction = 8.054649e-06) isotope = 62151.03c ; awr = 1.496230e+02 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 7.577058e-05 ; atomic fraction = 4.430079e-05) isotope = 62152.03c ; awr = 1.506150e+02 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 6.614487e-05 ; atomic fraction = 3.841962e-05) isotope = 63153.03c ; awr = 1.516080e+02 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 3.929504e-08 ; atomic fraction = 2.252933e-08) isotope = 64155.03c ; awr = 1.535920e+02 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.207331e-01 ; atomic fraction = 6.704560e-01) isotope =  8016.03c ; awr = 1.585751e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.911010e-04 ; atomic fraction = 7.252658e-05) isotope = 92234.03c ; awr = 2.320304e+02 ; temperature = 3.000116e+02 K  (fission present)
+        (mass fraction = 1.870402e-02 ; atomic fraction = 7.068249e-03) isotope = 92235.03c ; awr = 2.330248e+02 ; temperature = 3.000116e+02 K  (fission present)
+        (mass fraction = 3.521685e-03 ; atomic fraction = 1.325198e-03) isotope = 92236.03c ; awr = 2.340178e+02 ; temperature = 3.000116e+02 K  (fission present)
+        (mass fraction = 8.448226e-01 ; atomic fraction = 3.152259e-01) isotope = 92238.03c ; awr = 2.360058e+02 ; temperature = 3.000116e+02 K  (fission present)
+        (mass fraction = 2.884531e-04 ; atomic fraction = 1.080848e-04) isotope = 93237.03c ; awr = 2.350118e+02 ; temperature = 3.000116e+02 K  (fission present)
+        (mass fraction = 5.951126e-05 ; atomic fraction = 2.220537e-05) isotope = 94238.03c ; awr = 2.360045e+02 ; temperature = 3.000116e+02 K  (fission present)
+        (mass fraction = 5.505531e-03 ; atomic fraction = 2.045655e-03) isotope = 94239.03c ; awr = 2.369986e+02 ; temperature = 3.000116e+02 K  (fission present)
+        (mass fraction = 1.363037e-03 ; atomic fraction = 5.043409e-04) isotope = 94240.03c ; awr = 2.379920e+02 ; temperature = 3.000116e+02 K  (fission present)
+        (mass fraction = 8.528763e-04 ; atomic fraction = 3.142731e-04) isotope = 94241.03c ; awr = 2.389780e+02 ; temperature = 3.000116e+02 K  (fission present)
+        (mass fraction = 1.494940e-04 ; atomic fraction = 5.485669e-05) isotope = 94242.03c ; awr = 2.399790e+02 ; temperature = 3.000116e+02 K  (fission present)
+        (mass fraction = 1.791860e-05 ; atomic fraction = 6.602534e-06) isotope = 95241.03c ; awr = 2.389860e+02 ; temperature = 3.000116e+02 K  (fission present)
+        (mass fraction = 3.687272e-07 ; atomic fraction = 1.353035e-07) isotope = 95242.03c ; awr = 2.399801e+02 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.920564e-05 ; atomic fraction = 7.018408e-06) isotope = 95243.03c ; awr = 2.409734e+02 ; temperature = 3.000116e+02 K  (fission present)
+        (mass fraction = 4.188565e-06 ; atomic fraction = 1.536990e-06) isotope = 96242.03c ; awr = 2.399790e+02 ; temperature = 3.000116e+02 K  (fission present)
+        (mass fraction = 5.723413e-08 ; atomic fraction = 2.091538e-08) isotope = 96243.03c ; awr = 2.409730e+02 ; temperature = 3.000116e+02 K  (fission present)
+        (mass fraction = 3.574997e-06 ; atomic fraction = 1.301069e-06) isotope = 96244.03c ; awr = 2.419660e+02 ; temperature = 3.000116e+02 K  (fission present)
+        (mass fraction = 1.427081e-07 ; atomic fraction = 5.172408e-08) isotope = 96245.03c ; awr = 2.429600e+02 ; temperature = 3.000116e+02 K  (fission present)
+
+material = 2 ; internal = 1 : 
+     - density = 5.770000e+00 g/cm3 
+     - density = 3.809011e-02 atom/b-cm 
+        (mass fraction = 5.070613e-01 ; atomic fraction = 5.145000e-01) isotope = 40090.03c ; awr = 8.913240e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.118088e-01 ; atomic fraction = 1.122000e-01) isotope = 40091.03c ; awr = 9.012470e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.727810e-01 ; atomic fraction = 1.715000e-01) isotope = 40092.03c ; awr = 9.111550e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.789110e-01 ; atomic fraction = 1.738000e-01) isotope = 40094.03c ; awr = 9.309960e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.943790e-02 ; atomic fraction = 2.800000e-02) isotope = 40096.03c ; awr = 9.508440e+01 ; temperature = 3.000116e+02 K  (no fission)
+
+material = 3 ; internal = 2 : 
+     - density = 7.399777e-01 g/cm3 
+     - density = 7.416000e-02 atom/b-cm 
+        (mass fraction = 1.116910e-01 ; atomic fraction = 6.659257e-01) isotope =  1001.03c ; awr = 9.991670e-01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 3.600885e-04 ; atomic fraction = 2.160929e-04) isotope =  5010.03c ; awr = 9.926921e+00 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.640411e-03 ; atomic fraction = 8.953371e-04) isotope =  5011.03c ; awr = 1.091470e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 8.863085e-01 ; atomic fraction = 3.329629e-01) isotope =  8016.03c ; awr = 1.585751e+01 ; temperature = 3.000116e+02 K  (no fission)
+
+material = 4 ; internal = 3 : 
+     - density = 6.599531e-01 g/cm3 
+     - density = 6.614000e-02 atom/b-cm 
+        (mass fraction = 1.116910e-01 ; atomic fraction = 6.659257e-01) isotope =  1001.03c ; awr = 9.991670e-01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 3.600885e-04 ; atomic fraction = 2.160929e-04) isotope =  5010.03c ; awr = 9.926921e+00 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.640411e-03 ; atomic fraction = 8.953371e-04) isotope =  5011.03c ; awr = 1.091470e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 8.863085e-01 ; atomic fraction = 3.329629e-01) isotope =  8016.03c ; awr = 1.585751e+01 ; temperature = 3.000116e+02 K  (no fission)
+
+material = 5 ; internal = 4 : 
+     - density = 7.900000e+00 g/cm3 
+     - density = 8.511350e-02 atom/b-cm 
+        (mass fraction = 1.839284e-03 ; atomic fraction = 3.674640e-03) isotope = 14028.03c ; awr = 2.773700e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.002412e-04 ; atomic fraction = 1.933600e-04) isotope = 14029.03c ; awr = 2.872800e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 7.078459e-05 ; atomic fraction = 1.320000e-04) isotope = 14030.03c ; awr = 2.971600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 9.324407e-05 ; atomic fraction = 1.043500e-04) isotope = 24050.03c ; awr = 4.951700e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.944426e-03 ; atomic fraction = 2.092475e-03) isotope = 24052.03c ; awr = 5.149400e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.290678e-04 ; atomic fraction = 2.418500e-04) isotope = 24053.03c ; awr = 5.248600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 5.917945e-05 ; atomic fraction = 6.132500e-05) isotope = 24054.03c ; awr = 5.347600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 9.828805e-03 ; atomic fraction = 1.000000e-02) isotope = 25055.03c ; awr = 5.446610e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 5.246873e-02 ; atomic fraction = 5.437098e-02) isotope = 26054.03c ; awr = 5.347600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 8.856331e-01 ; atomic fraction = 8.850066e-01) isotope = 26056.03c ; awr = 5.545400e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.118789e-02 ; atomic fraction = 2.080080e-02) isotope = 26057.03c ; awr = 5.644600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.924506e-03 ; atomic fraction = 2.821590e-03) isotope = 26058.03c ; awr = 5.743600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 6.965144e-03 ; atomic fraction = 6.719800e-03) isotope = 28058.03c ; awr = 5.743800e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.870936e-03 ; atomic fraction = 2.677600e-03) isotope = 28060.03c ; awr = 5.941600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.289596e-04 ; atomic fraction = 1.183000e-04) isotope = 28061.03c ; awr = 6.040800e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 4.248933e-04 ; atomic fraction = 3.835000e-04) isotope = 28062.03c ; awr = 6.139600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.152870e-04 ; atomic fraction = 1.008000e-04) isotope = 28064.03c ; awr = 6.337900e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.541971e-03 ; atomic fraction = 1.369600e-03) isotope = 29063.03c ; awr = 6.238900e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 7.322749e-04 ; atomic fraction = 6.304000e-04) isotope = 29065.03c ; awr = 6.437000e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.395992e-03 ; atomic fraction = 8.490000e-04) isotope = 42092.03c ; awr = 9.111730e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 9.102394e-04 ; atomic fraction = 5.418000e-04) isotope = 42094.03c ; awr = 9.309840e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.602510e-03 ; atomic fraction = 9.438000e-04) isotope = 42095.03c ; awr = 9.409060e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.716146e-03 ; atomic fraction = 1.000200e-03) isotope = 42096.03c ; awr = 9.508080e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.004862e-03 ; atomic fraction = 5.796000e-04) isotope = 42097.03c ; awr = 9.607350e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.594814e-03 ; atomic fraction = 1.481400e-03) isotope = 42098.03c ; awr = 9.706430e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.079954e-03 ; atomic fraction = 6.042000e-04) isotope = 42100.03c ; awr = 9.904900e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 5.367702e-04 ; atomic fraction = 2.500000e-03) isotope =  6000.03c ; awr = 1.189800e+01 ; temperature = 3.000116e+02 K  (no fission)
+
+material = 6 ; internal = 5 : 
+     - density = 4.320000e+00 g/cm3 
+     - density = 5.042781e-02 atom/b-cm 
+        (mass fraction = 1.868798e-04 ; atomic fraction = 9.566100e-03) isotope =  1001.03c ; awr = 9.991670e-01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 4.555292e-03 ; atomic fraction = 8.399767e-03) isotope = 14028.03c ; awr = 2.773700e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.482641e-04 ; atomic fraction = 4.419968e-04) isotope = 14029.03c ; awr = 2.872800e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.753098e-04 ; atomic fraction = 3.017355e-04) isotope = 14030.03c ; awr = 2.971600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 7.020423e-03 ; atomic fraction = 7.251361e-03) isotope = 24050.03c ; awr = 4.951700e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.463974e-01 ; atomic fraction = 1.454077e-01) isotope = 24052.03c ; awr = 5.149400e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.724670e-02 ; atomic fraction = 1.680634e-02) isotope = 24053.03c ; awr = 5.248600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 4.455669e-03 ; atomic fraction = 4.261521e-03) isotope = 24054.03c ; awr = 5.347600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.947413e-02 ; atomic fraction = 1.828700e-02) isotope = 25055.03c ; awr = 5.446610e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 3.724360e-02 ; atomic fraction = 3.562077e-02) isotope = 26054.03c ; awr = 5.347600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 6.286443e-01 ; atomic fraction = 5.798060e-01) isotope = 26056.03c ; awr = 5.545400e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.503969e-02 ; atomic fraction = 1.362750e-02) isotope = 26057.03c ; awr = 5.644600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.075887e-03 ; atomic fraction = 1.848545e-03) isotope = 26058.03c ; awr = 5.743600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 6.210136e-02 ; atomic fraction = 5.529837e-02) isotope = 28058.03c ; awr = 5.743800e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.559732e-02 ; atomic fraction = 2.203442e-02) isotope = 28060.03c ; awr = 5.941600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.149806e-03 ; atomic fraction = 9.735108e-04) isotope = 28061.03c ; awr = 6.040800e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 3.788357e-03 ; atomic fraction = 3.155887e-03) isotope = 28062.03c ; awr = 6.139600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.027901e-03 ; atomic fraction = 8.295003e-04) isotope = 28064.03c ; awr = 6.337900e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 5.985922e-06 ; atomic fraction = 3.084090e-05) isotope =  5010.03c ; awr = 9.926921e+00 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.998296e-05 ; atomic fraction = 1.404990e-04) isotope =  5011.03c ; awr = 1.091470e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.353572e-02 ; atomic fraction = 7.591070e-02) isotope =  8016.03c ; awr = 1.585751e+01 ; temperature = 3.000116e+02 K  (no fission)
+
+material = 7 ; internal = 6 : 
+     - density = 4.280000e+00 g/cm3 
+     - density = 4.962575e-02 atom/b-cm 
+        (mass fraction = 1.671065e-04 ; atomic fraction = 8.611700e-03) isotope =  1001.03c ; awr = 9.991670e-01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 4.567045e-03 ; atomic fraction = 8.478313e-03) isotope = 14028.03c ; awr = 2.773700e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.489047e-04 ; atomic fraction = 4.461298e-04) isotope = 14029.03c ; awr = 2.872800e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.757621e-04 ; atomic fraction = 3.045570e-04) isotope = 14030.03c ; awr = 2.971600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 7.038501e-03 ; atomic fraction = 7.319130e-03) isotope = 24050.03c ; awr = 4.951700e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.467744e-01 ; atomic fraction = 1.467666e-01) isotope = 24052.03c ; awr = 5.149400e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.729111e-02 ; atomic fraction = 1.696341e-02) isotope = 24053.03c ; awr = 5.248600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 4.467143e-03 ; atomic fraction = 4.301348e-03) isotope = 24054.03c ; awr = 5.347600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.952428e-02 ; atomic fraction = 1.845790e-02) isotope = 25055.03c ; awr = 5.446610e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 3.733951e-02 ; atomic fraction = 3.595368e-02) isotope = 26054.03c ; awr = 5.347600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 6.302632e-01 ; atomic fraction = 5.852247e-01) isotope = 26056.03c ; awr = 5.545400e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.507842e-02 ; atomic fraction = 1.375486e-02) isotope = 26057.03c ; awr = 5.644600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.081233e-03 ; atomic fraction = 1.865821e-03) isotope = 26058.03c ; awr = 5.743600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 6.226122e-02 ; atomic fraction = 5.581513e-02) isotope = 28058.03c ; awr = 5.743800e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.566322e-02 ; atomic fraction = 2.224033e-02) isotope = 28060.03c ; awr = 5.941600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.152766e-03 ; atomic fraction = 9.826080e-04) isotope = 28061.03c ; awr = 6.040800e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 3.798109e-03 ; atomic fraction = 3.185378e-03) isotope = 28062.03c ; awr = 6.139600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.030547e-03 ; atomic fraction = 8.372518e-04) isotope = 28064.03c ; awr = 6.337900e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 5.352539e-06 ; atomic fraction = 2.776380e-05) isotope =  5010.03c ; awr = 9.926921e+00 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.681041e-05 ; atomic fraction = 1.264810e-04) isotope =  5011.03c ; awr = 1.091470e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.104537e-02 ; atomic fraction = 6.833690e-02) isotope =  8016.03c ; awr = 1.585751e+01 ; temperature = 3.000116e+02 K  (no fission)
+
+material = 8 ; internal = 7 : 
+     - density = 7.184000e+00 g/cm3 
+     - density = 7.914670e-02 atom/b-cm 
+        (mass fraction = 2.121262e-05 ; atomic fraction = 1.150500e-03) isotope =  1001.03c ; awr = 9.991670e-01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 4.653582e-03 ; atomic fraction = 9.091978e-03) isotope = 14028.03c ; awr = 2.773700e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.536209e-04 ; atomic fraction = 4.784210e-04) isotope = 14029.03c ; awr = 2.872800e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.790925e-04 ; atomic fraction = 3.266010e-04) isotope = 14030.03c ; awr = 2.971600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 7.171883e-03 ; atomic fraction = 7.848911e-03) isotope = 24050.03c ; awr = 4.951700e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.495558e-01 ; atomic fraction = 1.573900e-01) isotope = 24052.03c ; awr = 5.149400e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.761879e-02 ; atomic fraction = 1.819127e-02) isotope = 24053.03c ; awr = 5.248600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 4.551797e-03 ; atomic fraction = 4.612692e-03) isotope = 24054.03c ; awr = 5.347600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.989433e-02 ; atomic fraction = 1.979400e-02) isotope = 25055.03c ; awr = 5.446610e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 3.804711e-02 ; atomic fraction = 3.855611e-02) isotope = 26054.03c ; awr = 5.347600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 6.422069e-01 ; atomic fraction = 6.275850e-01) isotope = 26056.03c ; awr = 5.545400e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.536416e-02 ; atomic fraction = 1.475048e-02) isotope = 26057.03c ; awr = 5.644600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.120673e-03 ; atomic fraction = 2.000875e-03) isotope = 26058.03c ; awr = 5.743600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 6.344111e-02 ; atomic fraction = 5.985521e-02) isotope = 28058.03c ; awr = 5.743800e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.614955e-02 ; atomic fraction = 2.385016e-02) isotope = 28060.03c ; awr = 5.941600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.174612e-03 ; atomic fraction = 1.053732e-03) isotope = 28061.03c ; awr = 6.040800e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 3.870085e-03 ; atomic fraction = 3.415946e-03) isotope = 28062.03c ; awr = 6.139600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.050077e-03 ; atomic fraction = 8.978548e-04) isotope = 28064.03c ; awr = 6.337900e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 6.794515e-07 ; atomic fraction = 3.709150e-06) isotope =  5010.03c ; awr = 9.926921e+00 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 3.403308e-06 ; atomic fraction = 1.689740e-05) isotope =  5011.03c ; awr = 1.091470e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.671507e-03 ; atomic fraction = 9.129600e-03) isotope =  8016.03c ; awr = 1.585751e+01 ; temperature = 3.000116e+02 K  (no fission)
+
+material = 9 ; internal = 8 : 
+     - density = 2.530000e+00 g/cm3 
+     - density = 3.302270e-02 atom/b-cm 
+        (mass fraction = 5.352098e-04 ; atomic fraction = 2.450140e-02) isotope =  1001.03c ; awr = 9.991670e-01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 4.348652e-03 ; atomic fraction = 7.171335e-03) isotope = 14028.03c ; awr = 2.773700e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.370022e-04 ; atomic fraction = 3.773565e-04) isotope = 14029.03c ; awr = 2.872800e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.673573e-04 ; atomic fraction = 2.576079e-04) isotope = 14030.03c ; awr = 2.971600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 6.701965e-03 ; atomic fraction = 6.190885e-03) isotope = 24050.03c ; awr = 4.951700e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.397566e-01 ; atomic fraction = 1.241425e-01) isotope = 24052.03c ; awr = 5.149400e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.646436e-02 ; atomic fraction = 1.434850e-02) isotope = 24053.03c ; awr = 5.248600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 4.253553e-03 ; atomic fraction = 3.638294e-03) isotope = 24054.03c ; awr = 5.347600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.859074e-02 ; atomic fraction = 1.561260e-02) isotope = 25055.03c ; awr = 5.446610e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 3.555417e-02 ; atomic fraction = 3.041141e-02) isotope = 26054.03c ; awr = 5.347600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 6.001280e-01 ; atomic fraction = 4.950122e-01) isotope = 26056.03c ; awr = 5.545400e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.435746e-02 ; atomic fraction = 1.163455e-02) isotope = 26057.03c ; awr = 5.644600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.981721e-03 ; atomic fraction = 1.578205e-03) isotope = 26058.03c ; awr = 5.743600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 5.928430e-02 ; atomic fraction = 4.721123e-02) isotope = 28058.03c ; awr = 5.743800e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.443617e-02 ; atomic fraction = 1.881199e-02) isotope = 28060.03c ; awr = 5.941600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.097648e-03 ; atomic fraction = 8.311391e-04) isotope = 28061.03c ; awr = 6.040800e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 3.616509e-03 ; atomic fraction = 2.694352e-03) isotope = 28062.03c ; awr = 6.139600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 9.812733e-04 ; atomic fraction = 7.081895e-04) isotope = 28064.03c ; awr = 6.337900e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.714317e-05 ; atomic fraction = 7.899170e-05) isotope =  5010.03c ; awr = 9.926921e+00 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 8.586837e-05 ; atomic fraction = 3.598540e-04) isotope =  5011.03c ; awr = 1.091470e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 6.740429e-02 ; atomic fraction = 1.944274e-01) isotope =  8016.03c ; awr = 1.585751e+01 ; temperature = 3.000116e+02 K  (no fission)
+
+material = 10 ; internal = 9 : 
+     - density = 1.746000e+00 g/cm3 
+     - density = 2.504570e-02 atom/b-cm 
+        (mass fraction = 8.615235e-04 ; atomic fraction = 3.588700e-02) isotope =  1001.03c ; awr = 9.991670e-01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 4.155063e-03 ; atomic fraction = 6.234853e-03) isotope = 14028.03c ; awr = 2.773700e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.264516e-04 ; atomic fraction = 3.280787e-04) isotope = 14029.03c ; awr = 2.872800e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.599071e-04 ; atomic fraction = 2.239677e-04) isotope = 14030.03c ; awr = 2.971600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 6.403633e-03 ; atomic fraction = 5.382452e-03) isotope = 24050.03c ; awr = 4.951700e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.335354e-01 ; atomic fraction = 1.079314e-01) isotope = 24052.03c ; awr = 5.149400e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.573147e-02 ; atomic fraction = 1.247481e-02) isotope = 24053.03c ; awr = 5.248600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 4.064210e-03 ; atomic fraction = 3.163190e-03) isotope = 24054.03c ; awr = 5.347600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.776327e-02 ; atomic fraction = 1.357390e-02) isotope = 25055.03c ; awr = 5.446610e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 3.397152e-02 ; atomic fraction = 2.644016e-02) isotope = 26054.03c ; awr = 5.347600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 5.734140e-01 ; atomic fraction = 4.303714e-01) isotope = 26056.03c ; awr = 5.545400e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.371836e-02 ; atomic fraction = 1.011526e-02) isotope = 26057.03c ; awr = 5.644600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.893507e-03 ; atomic fraction = 1.372116e-03) isotope = 26058.03c ; awr = 5.743600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 5.664536e-02 ; atomic fraction = 4.104622e-02) isotope = 28058.03c ; awr = 5.743800e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.334844e-02 ; atomic fraction = 1.635545e-02) isotope = 28060.03c ; awr = 5.941600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.048788e-03 ; atomic fraction = 7.226059e-04) isotope = 28061.03c ; awr = 6.040800e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 3.455526e-03 ; atomic fraction = 2.342514e-03) isotope = 28062.03c ; awr = 6.139600e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 9.375936e-04 ; atomic fraction = 6.157116e-04) isotope = 28064.03c ; awr = 6.337900e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.759536e-05 ; atomic fraction = 1.156990e-04) isotope =  5010.03c ; awr = 9.926921e+00 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.382217e-04 ; atomic fraction = 5.270750e-04) isotope =  5011.03c ; awr = 1.091470e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.085002e-01 ; atomic fraction = 2.847761e-01) isotope =  8016.03c ; awr = 1.585751e+01 ; temperature = 3.000116e+02 K  (no fission)
+
+material = 11 ; internal = 10 : 
+     - density = 3.044000e+00 g/cm3 
+     - density = 2.290484e-02 atom/b-cm 
+        (mass fraction = 2.051538e-04 ; atomic fraction = 1.629130e-02) isotope =  1001.03c ; awr = 9.991670e-01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 4.865680e-01 ; atomic fraction = 4.331340e-01) isotope = 40090.03c ; awr = 8.913240e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.084676e-01 ; atomic fraction = 9.549277e-02) isotope = 40091.03c ; awr = 9.012470e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.694925e-01 ; atomic fraction = 1.475953e-01) isotope = 40092.03c ; awr = 9.111550e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.792968e-01 ; atomic fraction = 1.528055e-01) isotope = 40094.03c ; awr = 9.309960e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 3.009338e-02 ; atomic fraction = 2.511170e-02) isotope = 40096.03c ; awr = 9.508440e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 6.571252e-06 ; atomic fraction = 5.252280e-05) isotope =  5010.03c ; awr = 9.926921e+00 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 3.291466e-05 ; atomic fraction = 2.392720e-04) isotope =  5011.03c ; awr = 1.091470e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.583711e-02 ; atomic fraction = 1.292776e-01) isotope =  8016.03c ; awr = 1.585751e+01 ; temperature = 3.000116e+02 K  (no fission)
+
+material = 12 ; internal = 11 : 
+     - density = 1.762000e+00 g/cm3 
+     - density = 1.492807e-02 atom/b-cm 
+        (mass fraction = 4.152341e-04 ; atomic fraction = 2.928560e-02) isotope =  1001.03c ; awr = 9.991670e-01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 4.732248e-01 ; atomic fraction = 3.741374e-01) isotope = 40090.03c ; awr = 8.913240e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.054931e-01 ; atomic fraction = 8.248581e-02) isotope = 40091.03c ; awr = 9.012470e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.648444e-01 ; atomic fraction = 1.274915e-01) isotope = 40092.03c ; awr = 9.111550e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.743799e-01 ; atomic fraction = 1.319921e-01) isotope = 40094.03c ; awr = 9.309960e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 2.926812e-02 ; atomic fraction = 2.169126e-02) isotope = 40096.03c ; awr = 9.508440e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 1.330027e-05 ; atomic fraction = 9.441590e-05) isotope =  5010.03c ; awr = 9.926921e+00 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 6.661963e-05 ; atomic fraction = 4.301200e-04) isotope =  5011.03c ; awr = 1.091470e+01 ; temperature = 3.000116e+02 K  (no fission)
+        (mass fraction = 5.229459e-02 ; atomic fraction = 2.323919e-01) isotope =  8016.03c ; awr = 1.585751e+01 ; temperature = 3.000116e+02 K  (no fission)
+
+********************************************************************************
+
+[#] Ace module
+
+ - Master grid size :525379
+ - isotope =  1001.03c ; awr = 9.991670e-01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 14028.03c ; awr = 2.773700e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 14029.03c ; awr = 2.872800e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 14030.03c ; awr = 2.971600e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 24050.03c ; awr = 4.951700e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 24052.03c ; awr = 5.149400e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 24053.03c ; awr = 5.248600e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 24054.03c ; awr = 5.347600e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 25055.03c ; awr = 5.446610e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 26054.03c ; awr = 5.347600e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 26056.03c ; awr = 5.545400e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 26057.03c ; awr = 5.644600e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 26058.03c ; awr = 5.743600e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 28058.03c ; awr = 5.743800e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 28060.03c ; awr = 5.941600e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 28061.03c ; awr = 6.040800e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 28062.03c ; awr = 6.139600e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 28064.03c ; awr = 6.337900e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 29063.03c ; awr = 6.238900e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 29065.03c ; awr = 6.437000e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 40090.03c ; awr = 8.913240e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 40091.03c ; awr = 9.012470e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 40092.03c ; awr = 9.111550e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 40094.03c ; awr = 9.309960e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 40096.03c ; awr = 9.508440e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 42092.03c ; awr = 9.111730e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 42094.03c ; awr = 9.309840e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 42095.03c ; awr = 9.409060e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 42096.03c ; awr = 9.508080e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 42097.03c ; awr = 9.607350e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 42098.03c ; awr = 9.706430e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 42100.03c ; awr = 9.904900e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 43099.03c ; awr = 9.805660e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 44101.03c ; awr = 1.000390e+02 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 44103.03c ; awr = 1.020200e+02 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 47109.03c ; awr = 1.079690e+02 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope =  5010.03c ; awr = 9.926921e+00 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope =  5011.03c ; awr = 1.091470e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 54135.03c ; awr = 1.337480e+02 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 55133.03c ; awr = 1.317640e+02 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope =  6000.03c ; awr = 1.189800e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 60143.03c ; awr = 1.416820e+02 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 60145.03c ; awr = 1.436680e+02 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 62147.03c ; awr = 1.456530e+02 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 62149.03c ; awr = 1.476380e+02 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 62150.03c ; awr = 1.486290e+02 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 62151.03c ; awr = 1.496230e+02 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 62152.03c ; awr = 1.506150e+02 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 63153.03c ; awr = 1.516080e+02 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 64155.03c ; awr = 1.535920e+02 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope =  8016.03c ; awr = 1.585751e+01 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 92234.03c ; awr = 2.320304e+02 ; temperature = 3.000116e+02 K  (fission present)
+ - isotope = 92235.03c ; awr = 2.330248e+02 ; temperature = 3.000116e+02 K  (fission present)
+ - isotope = 92236.03c ; awr = 2.340178e+02 ; temperature = 3.000116e+02 K  (fission present)
+ - isotope = 92238.03c ; awr = 2.360058e+02 ; temperature = 3.000116e+02 K  (fission present)
+ - isotope = 93237.03c ; awr = 2.350118e+02 ; temperature = 3.000116e+02 K  (fission present)
+ - isotope = 94238.03c ; awr = 2.360045e+02 ; temperature = 3.000116e+02 K  (fission present)
+ - isotope = 94239.03c ; awr = 2.369986e+02 ; temperature = 3.000116e+02 K  (fission present)
+ - isotope = 94240.03c ; awr = 2.379920e+02 ; temperature = 3.000116e+02 K  (fission present)
+ - isotope = 94241.03c ; awr = 2.389780e+02 ; temperature = 3.000116e+02 K  (fission present)
+ - isotope = 94242.03c ; awr = 2.399790e+02 ; temperature = 3.000116e+02 K  (fission present)
+ - isotope = 95241.03c ; awr = 2.389860e+02 ; temperature = 3.000116e+02 K  (fission present)
+ - isotope = 95242.03c ; awr = 2.399801e+02 ; temperature = 3.000116e+02 K  (no fission)
+ - isotope = 95243.03c ; awr = 2.409734e+02 ; temperature = 3.000116e+02 K  (fission present)
+ - isotope = 96242.03c ; awr = 2.399790e+02 ; temperature = 3.000116e+02 K  (fission present)
+ - isotope = 96243.03c ; awr = 2.409730e+02 ; temperature = 3.000116e+02 K  (fission present)
+ - isotope = 96244.03c ; awr = 2.419660e+02 ; temperature = 3.000116e+02 K  (fission present)
+ - isotope = 96245.03c ; awr = 2.429600e+02 ; temperature = 3.000116e+02 K  (fission present)
+
+********************************************************************************
+
+[#] Source module
+
+ ( cdf =  1.0 ) 
+     ( cdf = 1.000000e+00 ) sampler = core ; position = (0.000000e+00,0.000000e+00,0.000000e+00) ; direction = (1.000000e+00,0.000000e+00,0.000000e+00) ; energy = (0 , 1.000000e+00) ; weight = 1.000000e+00
+         * distribution = iso ; type = isotropic ;
+         * distribution = box ; type = box-xyz ; (xmin = -1.600000e+02 , xmax = 1.600000e+02 ) ; (ymin = -1.600000e+02 , ymax = 1.600000e+02 ) ; (zmin = -1.830000e+02 , zmax = 1.830000e+02 ) 
+********************************************************************************
+
+[#] General settings
+
+                     awr_freegas_threshold ( value = 1.0 )
+                               criticality ( batches = 2150 inactive = 150 particles = 10000 )
+                  energy_freegas_threshold ( value = 400.0 )
+                       max_rng_per_history ( value = 100000 )
+                        max_source_samples ( value = 100 )
+                               multithread ( value = tbb )
+                                      seed ( value = 10 )
+                                   xs_data ( value = /users/larry/IB/CalCod/SERPENT/xsdata/endfb7/data )
+
+********************************************************************************
+
+[#] Simulation
+
+ - RNG seed                : 10
+ - Number of particles     : 10000
+ - Number of active cycles : 2000
+ - Number of MPI nodes     : 4
+ - Multithreading          : tbb
+
+End simulation on Sat Dec  1 04:01:07 2012
+
+Average time per cycle : 1.620486e-01 seconds 
+Average neutrons / sec : 6.610183e+01 K neutrons / sec 
+
+Final estimation 
+
+        leakage =  0.001501 +-  0.000010
+     absorption =  1.000178 +-  0.000014
+         (n,2n) =  0.001663 +-  0.000009
+         (n,3n) =  0.000008 +-  0.000001
+         (n,4n) =  0.000000 +-  0.000000
+     keff (abs) =  1.001628 +-  0.000231
+     keff (col) =  1.001388 +-  0.000236
+     keff (trk) =  1.001689 +-  0.000278
+
+Total time elapsed     : 356.033375 seconds 

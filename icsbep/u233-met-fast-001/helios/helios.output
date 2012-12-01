@@ -1,0 +1,89 @@
+
+     / / / /__  / (_)___  _____  __    __
+    / /_/ / _ \/ / / __ \/ ___/_/ /___/ /_
+   / __  /  __/ / / /_/ (__  )_  __/_  __/
+  /_/ /_/\___/_/_/\____/____/ /_/   /_/
+
+
+  A Continuous-energy Monte Carlo Reactor Physics Code
+
+   - Version    : 0.1
+   - Contact    : Esteban Pellegrino (pellegre@ib.cnea.gov.ar) 
+   - Compiler   : /usr/bin/c++
+   - Build type : release
+   - Build date : 11/30/2012 - 03:23:19 PM (commit aa5086ddf9494ca549fc47375aa134228e9679f0)
+   - Boost      : Version 1_42
+   - Intel TBB  : Version 3.0
+
+  Begin calculation on Sat Dec  1 04:16:47 2012
+
+********************************************************************************
+
+[#] Materials module
+
+material = uranium ; internal = 0 : 
+     - density = 1.842400e+01 g/cm3 
+     - density = 4.760118e-02 atom/b-cm 
+        (mass fraction = 9.811188e-01 ; atomic fraction = 9.813002e-01) isotope = 92233.03c ; awr = 2.310377e+02 ; temperature = 3.000116e+02 K  (fission present)
+        (mass fraction = 1.245084e-02 ; atomic fraction = 1.239986e-02) isotope = 92234.03c ; awr = 2.320304e+02 ; temperature = 3.000116e+02 K  (fission present)
+        (mass fraction = 3.025318e-04 ; atomic fraction = 3.000075e-04) isotope = 92235.03c ; awr = 2.330248e+02 ; temperature = 3.000116e+02 K  (fission present)
+        (mass fraction = 6.127825e-03 ; atomic fraction = 5.999939e-03) isotope = 92238.03c ; awr = 2.360058e+02 ; temperature = 3.000116e+02 K  (fission present)
+
+********************************************************************************
+
+[#] Ace module
+
+ - Master grid size :113696
+ - isotope = 92233.03c ; awr = 2.310377e+02 ; temperature = 3.000116e+02 K  (fission present)
+ - isotope = 92234.03c ; awr = 2.320304e+02 ; temperature = 3.000116e+02 K  (fission present)
+ - isotope = 92235.03c ; awr = 2.330248e+02 ; temperature = 3.000116e+02 K  (fission present)
+ - isotope = 92238.03c ; awr = 2.360058e+02 ; temperature = 3.000116e+02 K  (fission present)
+
+********************************************************************************
+
+[#] Source module
+
+ ( cdf =  1.0 ) 
+     ( cdf = 1.000000e+00 ) sampler = core ; position = (0.000000e+00,0.000000e+00,0.000000e+00) ; direction = (1.000000e+00,0.000000e+00,0.000000e+00) ; energy = (0 , 2.530000e-08) ; weight = 1.000000e+00
+         * distribution = fission ; type = ace ;isotope = 92233.03c ; awr = 2.310377e+02 ; temperature = 3.000116e+02 K  (fission present)
+
+********************************************************************************
+
+[#] General settings
+
+                     awr_freegas_threshold ( value = 1.0 )
+                               criticality ( batches = 2150 inactive = 150 particles = 50000 )
+                  energy_freegas_threshold ( value = 400.0 )
+                       max_rng_per_history ( value = 100000 )
+                        max_source_samples ( value = 100 )
+                               multithread ( value = tbb )
+                                      seed ( value = 10 )
+                                   xs_data ( value = /users/larry/IB/CalCod/SERPENT/xsdata/endfb7/data )
+
+********************************************************************************
+
+[#] Simulation
+
+ - RNG seed                : 10
+ - Number of particles     : 50000
+ - Number of active cycles : 2000
+ - Number of MPI nodes     : 4
+ - Multithreading          : tbb
+
+End simulation on Sat Dec  1 04:17:21 2012
+
+Average time per cycle : 1.563868e-02 seconds 
+Average neutrons / sec : 3.260766e+03 K neutrons / sec 
+
+Final estimation 
+
+        leakage =  0.613141 +-  0.000050
+     absorption =  0.387502 +-  0.000050
+         (n,2n) =  0.000642 +-  0.000002
+         (n,3n) =  0.000000 +-  0.000000
+         (n,4n) =  0.000000 +-  0.000000
+     keff (abs) =  0.999603 +-  0.000131
+     keff (col) =  0.999639 +-  0.000109
+     keff (trk) =  0.999546 +-  0.000089
+
+Total time elapsed     : 34.188441 seconds 
